@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("me.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("laptop.jpg");
+  background-position: top;
+  min-height: 500px;
+}
+
+.bgimg-3 {
+  background-image: url("buildings.jpg");
+  min-height: 400px;
+}
+.bgimg-4 {
+  background-image: url("me.jpg");
+  min-height: 10%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+/*typed animation*/
+
+
+/* this entire top nav section is messed up*/
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 1px;
+    padding-left: 18px;
+    position: fixed;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*Button styling*/
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #927BBF;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #8F5AFB}
+
+.button:active {
+  background-color: #8F5AFB;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Who am I?</a>
+  <a href="#">Resume</a>
+  <a href="#">Internships</a>
+  <a href="#">Contact Me</a>
+  <a href="#">Links</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+</div>
+
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">HI, I'M PRANAV VASUDHA</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">Who am I?</h3>
+  <p>Well I guess you already know my name, but that's not nearly enough to answer this question. I'm a currently a sophmore studying Computer Science at Purdue University - boiler up! I chose Computer Science as my major in order to play a part with the technology that's so integrated into our everyday lives. I want to be able to make the divide between humans and technology more integrated than having to interact with a 2-D screen. The person I look up to the most is Elon Musk because of his willingness to make the world a better place despite the odds and nearly abundant amount of ambition. I love creating websites and android apps, going out on impromptu adventures, reading books, and watching cute videos of cats.</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:#FF5126;font-size:25px;color:white;">THIS IS PRETTY MUCH MY NATURAL HABITAT</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#666666;text-align:center;padding:100px 80px;text-align: justify;">
+    <button class="button" style="width:100%;text-align: center;">VIEW MY RESUME</button>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #669999;">INTERNSHIPS</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>SEND ME A MESSAGE FEATURE WILL BE IMPLEMENTED HERE</p>
+  </div>
+</div>
+
+<div class="bgimg-4">
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+
+</body>
+</html>
