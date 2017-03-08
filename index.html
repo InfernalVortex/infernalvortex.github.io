@@ -105,8 +105,8 @@ h3 {
     transition: margin-left .5s;
     padding: 1px;
     padding-left: 18px;
+    z-index: 1000 !important;
     position: fixed;
-    z-index: 1000;
 }
 
 @media screen and (max-height: 450px) {
@@ -140,6 +140,11 @@ h3 {
 </head>
 
 <body>
+<div id="main">
+  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+</div>
+
+
 <div class="bgimg-1">
   <div class="caption">
     <span class="border">HI, I'M PRANAV VASUDHA</span>
@@ -176,10 +181,6 @@ h3 {
 </div>
 
 <div class="bgimg-4">
-</div>
-
-<div id="main">
-  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
 </div>
 
 <div id="mySidenav" class="sidenav">
