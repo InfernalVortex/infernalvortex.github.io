@@ -2,6 +2,17 @@
 <html>
 
 <head>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#who">Who am I?</a>
+  <a href="#resume">Resume</a>
+  <a href="#internships">Internships</a>
+  <a href="#contact">Contact Me</a>
+  <a href="#links">Links</a>
+</div>
+
 <style>
 body, html {
   height: 100%;
@@ -20,14 +31,14 @@ body, html {
 
 }
 .bgimg-1 {
-  background-image: url("me.jpg");
+  background-image: url("mebackground.jpg");
   min-height: 100%;
 }
 
 .bgimg-2 {
   background-image: url("laptop.jpg");
   background-position: top;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .bgimg-3 {
@@ -35,8 +46,8 @@ body, html {
   min-height: 400px;
 }
 .bgimg-4 {
-  background-image: url("me.jpg");
-  min-height: 10%;
+  background-image: url("mebackground.jpg");
+  min-height: 8%;
 }
 
 .caption {
@@ -90,7 +101,7 @@ h3 {
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #FF8E72;
 }
 
 .sidenav .closebtn {
@@ -136,63 +147,78 @@ h3 {
   transform: translateY(4px);
 }
 
+.typewrite {
+  font: 400 40px/1.8 "Lato", sans-serif;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  /*background-color: #111;
+  padding: 18px;*/
+}
+
+.typewrite span.wrap {
+  background-color: #111;
+  padding: 20px;
+  font: 400 40px/1.8 "Lato", sans-serif;
+  letter-spacing: 7.5px;
+}
+
+
 </style>
 </head>
 
 <body>
 <div id="main">
-  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+  <span style="font-size:30px;cursor:pointer;color:#FF8E72" onclick="openNav()">&#9776;</span>
 </div>
 
-
-<div class="bgimg-1">
+<!--<div class="bgimg-1">
   <div class="caption">
     <span class="border">HI, I'M PRANAV VASUDHA</span>
   </div>
+</div>-->
+
+<div id="home" class="bgimg-1">
+    <a href="" class="typewrite" data-period="2000" data-type='[ "HI, I AM PRANAV.", "HI, I AM A DEVELOPER.", "HI, I AM A DESIGNER."]'>
+    <span class="wrap"></span>
+    </a>
 </div>
 
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+<div id="who"style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <h3 style="text-align:center;">Who am I?</h3>
-  <p>Well I guess you already know my name, but that's not nearly enough to answer this question. I'm a currently a sophmore studying Computer Science at Purdue University - boiler up! I chose Computer Science as my major in order to play a part with the technology that's so integrated into our everyday lives. I want to be able to make the divide between humans and technology more integrated than having to interact with a 2-D screen. The person I look up to the most is Elon Musk because of his willingness to make the world a better place despite the odds and nearly abundant amount of ambition. I love creating websites and android apps, going out on impromptu adventures, reading books, and watching cute videos of cats.</p>
+  <p>Well I guess you already know my name, but that's not nearly enough to answer this question. I'm a currently a junior studying Computer Science and minoring in Math at Purdue University - Boiler Up! I chose Computer Science as my major in order to play a part with the technology that's so integrated into our everyday lives. I want to be able to make the divide between humans and technology more integrated than having to interact with a 2-D screen. The person I look up to the most is Elon Musk because of his willingness to make the world a better place with an abundant amount of ambition despite the odds. I love creating websites and android apps, hiking, going out on impromptu adventures, reading books, and watching cute videos of cats.</p>
 </div>
 
 <div class="bgimg-2">
   <div class="caption">
-    <span class="border" style="background-color:#FF5126;font-size:25px;color:white;">THIS IS PRETTY MUCH MY NATURAL HABITAT</span>
+    <span class="border" style="background-color:#FF5126;font-size:27px;color:white;">THIS IS PRETTY MUCH MY NATURAL HABITAT</span>
   </div>
 </div>
 
-<div style="position:relative;">
+<div id="resume" style="position:relative;">
   <div style="color:#ddd;background-color:#666666;text-align:center;padding:100px 80px;text-align: justify;">
     <button class="button" style="width:100%;text-align: center;">VIEW MY RESUME</button>
   </div>
 </div>
 
-<div class="bgimg-3">
+<div id="internships" class="bgimg-3">
   <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #669999;">INTERNSHIPS</span>
+    <span class="border" style="background-color:background-color: #111;font-size:25px;color: #669999;">INTERNSHIPS</span>
   </div>
 </div>
 
-<div style="position:relative;">
+<div id="contact" style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
     <p>SEND ME A MESSAGE FEATURE WILL BE IMPLEMENTED HERE</p>
   </div>
 </div>
 
-<div class="bgimg-4">
+<div id="links" class="bgimg-4">
 </div>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Home</a>
-  <a href="#">Who am I?</a>
-  <a href="#">Resume</a>
-  <a href="#">Internships</a>
-  <a href="#">Contact Me</a>
-  <a href="#">Links</a>
-</div>
-
 
 <script>
 function openNav() {
@@ -206,6 +232,63 @@ function closeNav() {
     document.getElementById("main").style.marginLeft= "0";
     document.body.style.backgroundColor = "white";
 }
+
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
 </script>
 
 </body>
